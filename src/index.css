@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background-color: #b98b42;
+  color: #f6f1e6;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f1e6;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #b98b42;
+  border-radius: 999px;
+  border: 2px solid #f6f1e6;
+}
+
+/* Visible keyboard focus ring across the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #b98b42;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Section number/leader dots for the pricing menu.
+   Color is deliberately left unset here (defaults to currentColor) so the
+   Tailwind border-color utility applied per-instance (e.g. border-ink/20 on
+   light sections, border-ivory/15 on dark sections) always wins. */
+.leader {
+  flex: 1 1 auto;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  margin: 0 0.75rem;
+  transform: translateY(-4px);
+}
