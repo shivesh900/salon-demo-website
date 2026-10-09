@@ -13,7 +13,7 @@ const images = [
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1522337194846-9c8f7e9d1f0d?auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80",
     caption: "Signature blow-dry",
     span: "",
   },
